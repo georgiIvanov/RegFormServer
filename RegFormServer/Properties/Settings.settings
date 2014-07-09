@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RegFormServer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RegFormConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;mongodb://appharbor_d3430fc0-8a0a-4200-9850-878981937679:5sbb57hmdud8ardiqehmcvfqnn@ds045938.mongolab.com:45938/appharbor_d3430fc0-8a0a-4200-9850-878981937679&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">mongodb://appharbor_d3430fc0-8a0a-4200-9850-878981937679:5sbb57hmdud8ardiqehmcvfqnn@ds045938.mongolab.com:45938/appharbor_d3430fc0-8a0a-4200-9850-878981937679</Value>
+    </Setting>
+    <Setting Name="RegFormDatabase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">appharbor_d3430fc0-8a0a-4200-9850-878981937679</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
