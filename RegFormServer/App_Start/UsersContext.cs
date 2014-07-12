@@ -19,11 +19,11 @@ namespace RegFormServer.App_Start
             this.Database = server.GetDatabase(Settings.Default.RegFormDatabase);
         }
 
-        public MongoCollection<FormUser> Users
+        public MongoCollection<User> Users
         {
             get
             {
-                return Database.GetCollection<FormUser>("users");
+                return Database.GetCollection<User>("users");
             }
         }
     }

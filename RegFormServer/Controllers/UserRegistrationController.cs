@@ -1,4 +1,7 @@
-﻿using RegFormServer.App_Start;
+﻿using MongoDB.Bson;
+using MongoDB.Driver.Builders;
+using MongoDB.Driver.Linq;
+using RegFormServer.App_Start;
 using RegFormServer.Models;
 using System;
 using System.Collections.Generic;
@@ -23,7 +26,21 @@ namespace RegFormServer.Controllers
                 return response;
             }
 
+            if(this.FindUser(user) != null)
+            {
+                return this.Request.CreateResponse(HttpStatusCode.BadRequest,
+                    new { error = new ErrorResponse("User already exists").ErrorDescriptions });
+            }
+
+            Context.Users.Insert(user);
+            
             return this.Request.CreateResponse(HttpStatusCode.OK, user);
+        }
+
+        FormUser FindUser(FormUser user)
+        {
+            var foundUser = Context.Users.AsQueryable().FirstOrDefault(x => x.Email == user.Email);
+            return foundUser;
         }
 
         HttpResponseMessage ValidateUserRegistration(FormUser user)
