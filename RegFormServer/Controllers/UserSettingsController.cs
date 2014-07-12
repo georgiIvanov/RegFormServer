@@ -76,8 +76,7 @@ namespace RegFormServer.Controllers
                 }
 
                 var avatarId = ObjectId.GenerateNewId();
-                string avatarUrl = "http://" + this.Request.RequestUri.Authority +
-                    "/api/usersettings/avatarforid?id=" + avatarId.ToString();
+                string avatarUrl = "http://regformserver.apphb.com/api/usersettings/avatarforid?id=" + avatarId.ToString();
                 foundUser.AvatarUrl = avatarUrl;
 
                 Context.Users.Save(foundUser);
