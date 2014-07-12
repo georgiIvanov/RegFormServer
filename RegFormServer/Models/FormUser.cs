@@ -9,5 +9,9 @@ namespace RegFormServer.Models
     {
         public string Email { get; set; }
         public string Password { get; set; }
+        public UserGender Gender { get; set; }
+        public DateTime Birthday { get; set; }
+        public bool BirthDatePublic { get; set; }
+        public string Fullname { get; set; }
     }
 }

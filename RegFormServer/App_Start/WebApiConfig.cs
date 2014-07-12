@@ -16,11 +16,17 @@ namespace RegFormServer
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                name: "AccountRegistrationApi",
+                routeTemplate: "oauth2/{action}/{id}",
+                defaults: new
+                {
+                    id = RouteParameter.Optional,
+                    controller = "UserRegistration"
+                }
             );
+                        
         }
     }
 }
