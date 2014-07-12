@@ -11,6 +11,5 @@ namespace RegFormServer.Models
     {
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
-
     }
 }

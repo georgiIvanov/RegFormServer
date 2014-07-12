@@ -13,5 +13,6 @@ namespace RegFormServer.Models
         public DateTime Birthday { get; set; }
         public bool BirthDatePublic { get; set; }
         public string Fullname { get; set; }
+        public string AvatarUrl { get; set; }
     }
 }

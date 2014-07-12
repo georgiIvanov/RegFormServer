@@ -27,7 +27,7 @@ namespace RegFormServer.Controllers
             StringBuilder stringResult = new StringBuilder();
             stringResult.Append(JsonConvert.SerializeObject(Context.Database.Server.BuildInfo, Formatting.Indented));
 
-            return Content(stringResult.ToString());
+            return View();
         }
     }
 }
