@@ -69,5 +69,11 @@ namespace RegFormServer.Controllers
                 return null;
             }
         }
+
+        protected HttpResponseMessage ErrorWithDescription(string errorDescription, HttpStatusCode httpStatusCode = HttpStatusCode.BadRequest)
+        {
+            return this.Request.CreateResponse(HttpStatusCode.BadRequest,
+                    new { error = new ErrorResponse(errorDescription).ErrorDescriptions });
+        }
     }
 }
